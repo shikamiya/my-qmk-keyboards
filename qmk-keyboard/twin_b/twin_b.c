@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "twin_b.h"
+#include "LUFA/Drivers/Peripheral/TWI.h"
 
 // Optional override functions below.
 // You can leave any or all of these undefined.
@@ -49,3 +50,11 @@ void led_set_kb(uint8_t usb_led) {
 }
 
 */
+
+//SSD1306 OLED init and update loop
+#ifdef OLED_DRIVER_ENABLE
+void matrix_master_OLED_init (void) {
+    TWI_Init(TWI_BIT_PRESCALE_1, TWI_BITLENGTH_FROM_FREQ(1, 800000));
+}
+
+#endif
