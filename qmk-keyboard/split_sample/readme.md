@@ -18,4 +18,15 @@ Make example for this keyboard (after setting up your build environment):
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
+## How to create this project
 
+### copy template by script
+
+run script below:
+
+    cd /path/to/qmk_firmware
+    util/new_keyboard.sh
+
+then input keyboard's name and answer some questions (just hit enter if you don't understand it).
+
+you can use alphanumeric letters as keyboard's name, but **can't use hyphen** . It cause build error.
