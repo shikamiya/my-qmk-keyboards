@@ -7,7 +7,7 @@ This project is for document purpose, but based on [Helix](https://github.com/Ma
 Currently NOT TESTED for Helix!
 
 Keyboard Maintainer: [shikamiya](https://github.com/shikamiya), [MakotoKurauchi](https://github.com/MakotoKurauchi)  
-Hardware Supported: Helix PCB, Pro Micro, OLED using SSD1306 and SK6812mini RGB LED  
+Hardware Supported: Helix PCB, Pro Micro, OLED using SSD1306 controller and SK6812mini RGB LED  
 Hardware Availability: [Helix keyboard kit at Yushakobo](https://yushakobo.jp/shop/helix-keyboard-kit/)
 
 Make example for this keyboard (after setting up your build environment):
