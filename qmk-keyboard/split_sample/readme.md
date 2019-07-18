@@ -1,4 +1,4 @@
-日本語バージョンは下にあります。
+[日本語バージョン](readme_ja.md)もあります。
 
 # split_sample EN
 
@@ -17,18 +17,5 @@ Make example for this keyboard (after setting up your build environment):
     make split_sample:default
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
-
-
-# split_sample 日本語
-
-解説用のプロジェクトですが、Helixをベースに作成しています。
-
-現在のところ、実際にテストはできていないのでご了承ください。
-
-qmk_firmware のビルド環境の準備ができたら、以下を実行することでビルドすることができます。
-
-    cd (qmk_firmwareのディレクトリ)
-    cp -r (このファイルがあるディレクトリ) keyboards/
-    make split_sample:default
 
 
