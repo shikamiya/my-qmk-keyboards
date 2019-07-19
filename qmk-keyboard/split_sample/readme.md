@@ -29,7 +29,7 @@ run script below:
 
 then input keyboard's name and answer some questions (just hit enter if you don't understand it).
 
-you can use alphanumeric letters as keyboard's name, but **can't use hyphen** . It cause build error.
+you can use alphanumeric letters as keyboard's name, but **can't use hyphen** . It causes build error.
 
 ### change settings
 
