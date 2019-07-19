@@ -30,3 +30,9 @@ run script below:
 then input keyboard's name and answer some questions (just hit enter if you don't understand it).
 
 you can use alphanumeric letters as keyboard's name, but **can't use hyphen** . It cause build error.
+
+### change rules.mk settings
+
+#### bootloader setting
+
+default `BOOTLOADER` value is `atmel-dfu`. If you're using pro micro with default caterina bootloader, change it to `caterina`.

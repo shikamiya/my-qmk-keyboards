@@ -14,7 +14,7 @@ F_USB = $(F_CPU)
 OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 
 # Bootloader selection
-BOOTLOADER = atmel-dfu
+BOOTLOADER = caterina
 
 # Build Options
 #   change yes to no to disable
