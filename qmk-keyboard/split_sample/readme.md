@@ -56,3 +56,17 @@ default I2C pin of pro micro is `D0` for clock and `D1` for data.
 you need 2 resistor to pull up these 2 signal pins. (according to Let's split, resistance value is about 4.7kOhm)
 
 if you use split feature with OLED, you may need to use software serial for split. (TODO: test it)
+
+#### RGB LED settings
+
+if you use RGB LED like SK6812mini, modify `RGBLIGHT_ENABLE` in `rules.mk` to `yes`.
+
+default LED data pin is `E2`, but Pro Micro doesn't provide this pin. this project's code is using `D3` pin.
+
+you need to uncomment `#define RGB_DI_PIN` (remove `//` at the start of the line) and modify this value to your selected value.
+
+and you also need to uncomment `#define RGBLED_NUM` and modify this value to the number of LEDs connected to your keyboard.
+
+then you can configulate some more features described in [RGB Lightning docs of QMK](https://beta.docs.qmk.fm/features/feature_rgblight).
+
+for example, if you use lightning both hands for split keyboard, add `#define RGBLED_SPLIT { (LEFT), (RIGHT) }` and modify the number of LEDs connected to each hands. (TODO: test it)

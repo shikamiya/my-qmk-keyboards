@@ -49,4 +49,16 @@ Pro Micro では `D0` をクロック用ピンに、 `D1` をデータ用ピン�
 
 I2Cを使用するにはその2本のピンをプルアップする必要があります。Let's split などでは 4.7kOhm 程度の抵抗が使用されています。
 
-OLED を使用する場合は、分割機能には soft serial を使用する必要があるかもしれません。
+OLED を使用する場合は、分割機能には soft serial を使用する必要があるかもしれません。(未検証)
+
+#### LEDの設定
+
+SK6812miniなどのLEDを使用する場合、 `rules.mk` ファイル内の `RGBLIGHT_ENABLE` を `yes` に変更してください。
+
+デフォルトのLED用データピンは `E2` になっていますが、Pro Microではこのピンを使用することはできません。このプロジェクトでは `D3` ピンを使用しています。
+
+`config.h` ファイル内の `#define RGB_DI_PIN` と `#define RGBLED_NUM` をアンコメント(行頭の `//` を削除)して、それぞれ LED用データピン と 接続するLEDの数 に変更してください。
+
+QMKのドキュメント内の[RGB Lightning](https://beta.docs.qmk.fm/features/feature_rgblight)ページに、他にも使用できる設定が書かれています。
+
+例えば、分割キーボードでLEDを使用する場合、 `config.h` ファイル内に `#define RGBLED_SPLIT { (左), (右) }` を追加して、それぞれの基板に接続するLEDの数に変更してください。
