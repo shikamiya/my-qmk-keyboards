@@ -20,6 +20,8 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
 ## How to create this project
 
+this project contains working firmware settings, and you can follow this instruction to build your own project like this.
+
 ### copy template by script
 
 run script below:
@@ -32,8 +34,6 @@ then input keyboard's name and answer some questions (just hit enter if you don'
 you can use alphanumeric letters as keyboard's name, but **can't use hyphen** . It causes build error.
 
 ### change settings
-
-this project contains working firmware settings, and you can follow this instruction to build your own project like this.
 
 #### bootloader setting
 
@@ -104,3 +104,5 @@ disabling this feature makes about 200 bytes free space.
 change `MOUSEKEY_ENABLE` value in `rules.mk` to `no`.
 
 disabling this feature makes about 3000 bytes free space.
+
+###
