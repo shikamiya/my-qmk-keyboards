@@ -64,3 +64,13 @@ SK6812miniなどのLEDを使用する場合、 `rules.mk` ファイル内の `RG
 QMKのドキュメント内の[RGB Lightning](https://beta.docs.qmk.fm/features/feature_rgblight)ページに、他にも使用できる設定が書かれています。
 
 例えば、分割キーボードでLEDを使用する場合、 `config.h` ファイル内に `#define RGBLED_SPLIT { (左), (右) }` を追加して、それぞれの基板に接続するLEDの数に変更してください。
+
+#### OLEDの設定
+
+OLEDを使う場合、 `rules.mk` ファイル内に `OLED_DRIVER_ENABLE = yes` を追加してください。
+
+デフォルトの解像度は `128x32` です。 `128x64` のディスプレイを使用する場合は、 `config.h` ファイル内に `#define OLED_DISPLAY_128X64` を追加してください。
+
+ディスプレイに文字を表示するには、 `keymap.c` ファイル内に `oled_task_user` 関数を追加して、その中で `oled_write_P()` などのAPIを使用します。 詳細な説明は [OLED Driver](https://beta.docs.qmk.fm/features/feature_oled_driver) ページに書かれています。
+
+また、上記ページに書かれている他の設定も変更が可能です。例えば、表示するロゴをカスタマイズするためにフォントファイルを変更することができます。

@@ -61,3 +61,11 @@ void matrix_scan_user(void) {
 void led_set_user(uint8_t usb_led) {
 
 }
+
+#ifdef OLED_DRIVER_ENABLE
+
+void oled_task_user(void) {
+  oled_write_ln_P(PSTR("Modify keymap.c to show what you want here"), false);
+}
+
+#endif

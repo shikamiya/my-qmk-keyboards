@@ -72,3 +72,15 @@ and you also need to uncomment `#define RGBLED_NUM` and modify this value to the
 then you can configulate some more features described in [RGB Lightning docs of QMK](https://beta.docs.qmk.fm/features/feature_rgblight).
 
 for example, if you use lightning both hands for split keyboard, add `#define RGBLED_SPLIT { (LEFT), (RIGHT) }` and modify the number of LEDs connected to each hands. (TODO: test it)
+
+#### OLED setting
+
+if you use OLED, add `OLED_DRIVER_ENABLE = yes` in `rules.mk`.
+
+default resolution is `128x32`. if you use `128x64` display, add `#define OLED_DISPLAY_128X64` in `config.h`.
+
+then add `oled_task_user()` function to `keymap.c` file. in the function, you can use API function like `oled_write_P()` to show something in OLED. more API is described in  [OLED Driver docs of QMK](https://beta.docs.qmk.fm/features/feature_oled_driver).
+
+you can also configulate some more features described in the docs above.
+
+for example, you can use different font file to show some more logos.
