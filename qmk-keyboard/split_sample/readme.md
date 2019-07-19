@@ -33,6 +33,8 @@ you can use alphanumeric letters as keyboard's name, but **can't use hyphen** . 
 
 ### change settings
 
+this project contains working firmware settings, and you can follow this instruction to build your own project like this.
+
 #### bootloader setting
 
 default `BOOTLOADER` value in `rules.mk` file is `atmel-dfu`. If you're using pro micro with default caterina bootloader, change it to `caterina`.
