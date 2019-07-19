@@ -91,7 +91,7 @@ OLEDを使う場合、 `rules.mk` ファイル内に `OLED_DRIVER_ENABLE = yes` 
 
 無効化によっておよそ200バイトの容量を削減することが可能です。
 
-#### Option: マウスキーの無効化
+##### Option: マウスキーの無効化
 
 `rules.mk` ファイル内の `MOUSEKEY_ENABLE` の値を `no` に変更することで無効化することができます。
 
