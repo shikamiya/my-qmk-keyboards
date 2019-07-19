@@ -36,3 +36,23 @@ you can use alphanumeric letters as keyboard's name, but **can't use hyphen** . 
 #### bootloader setting
 
 default `BOOTLOADER` value in `rules.mk` file is `atmel-dfu`. If you're using pro micro with default caterina bootloader, change it to `caterina`.
+
+#### split keyboard setting
+
+if you use split feature, add `SPLIT_KEYBOARD = yes` to `rules.mk` file. then you need to modify following split keyboard's setting in `config.h`.
+
+Note: currently this project's code is using 3-wired soft serial with `D3` pin.
+
+##### software serial(3-wired, use normal TRS AUX audio cable)
+
+choose one signal pin in `D0`, `D1`, `D2`, `D3` or `E6`. default is `D0`, so you need to change `#define SOFT_SERIAL_PIN D0` in `config.h` to your selected value.
+
+##### I2C(4-wired, use TRRS cable)
+
+you need to add `#define USE_I2C` to `config.h` file.
+
+default I2C pin of pro micro is `D0` for clock and `D1` for data.
+
+you need 2 resistor to pull up these 2 signal pins. (according to Let's split, resistance value is about 4.7kOhm)
+
+if you use split feature with OLED, you may need to use software serial for split. (TODO: test it)

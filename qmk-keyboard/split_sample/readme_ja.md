@@ -30,3 +30,23 @@ qmk_firmware のビルド環境の準備ができたら、以下を実行する�
 #### bootloader の設定
 
 `rules.mk` ファイル内の `BOOTLOADER` の初期値は `atmel-dfu` になっています。ProMicroをデフォルトのcaterinaブートローダーで使用する場合は `caterina` に変更してください。
+
+#### 分割キーボードの設定
+
+分割機能を使用する場合、  `rules.mk` ファイルに `SPLIT_KEYBOARD = yes` を追加して、以下のいずれかを `config.h` ファイルで設定してください。
+
+(現在このプロジェクトは `D3` ピンでの soft serial を使用しています。)
+
+##### soft serial(3本線、通常の音楽用AUXケーブルで接続)
+
+`D0`, `D1`, `D2`, `D3`, `E6` ピンの中から通信に使用するピンを選択してください。デフォルトは `D0` です。変更するには `config.h` ファイル内の `#define SOFT_SERIAL_PIN D0` を書き換えてください。
+
+##### I2C(4本線、TRRSケーブル・USB OTGケーブルなどで接続)
+
+`config.h` ファイルに `#define USE_I2C` を追加する必要があります。
+
+Pro Micro では `D0` をクロック用ピンに、 `D1` をデータ用ピンに使用します。
+
+I2Cを使用するにはその2本のピンをプルアップする必要があります。Let's split などでは 4.7kOhm 程度の抵抗が使用されています。
+
+OLED を使用する場合は、分割機能には soft serial を使用する必要があるかもしれません。
