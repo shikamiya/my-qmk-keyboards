@@ -31,8 +31,8 @@ then input keyboard's name and answer some questions (just hit enter if you don'
 
 you can use alphanumeric letters as keyboard's name, but **can't use hyphen** . It cause build error.
 
-### change rules.mk settings
+### change settings
 
 #### bootloader setting
 
-default `BOOTLOADER` value is `atmel-dfu`. If you're using pro micro with default caterina bootloader, change it to `caterina`.
+default `BOOTLOADER` value in `rules.mk` file is `atmel-dfu`. If you're using pro micro with default caterina bootloader, change it to `caterina`.

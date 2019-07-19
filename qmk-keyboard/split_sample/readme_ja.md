@@ -25,8 +25,8 @@ qmk_firmware のビルド環境の準備ができたら、以下を実行する�
 
 キーボード名には英数字、アンダーバーを使用できますが、 **ハイフンは使用できません** 。ビルド時にエラーが出るのでハマりやすいです。
 
-### rules.mk ファイルの設定変更
+### 設定変更
 
 #### bootloader の設定
 
-`BOOTLOADER` の初期値は `atmel-dfu` になっています。ProMicroをデフォルトのcaterinaブートローダーで使用する場合は `caterina` に変更してください。
+`rules.mk` ファイル内の `BOOTLOADER` の初期値は `atmel-dfu` になっています。ProMicroをデフォルトのcaterinaブートローダーで使用する場合は `caterina` に変更してください。
