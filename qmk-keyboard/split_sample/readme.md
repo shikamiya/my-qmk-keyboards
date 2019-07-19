@@ -39,15 +39,15 @@ default `BOOTLOADER` value in `rules.mk` file is `atmel-dfu`. If you're using pr
 
 #### split keyboard setting
 
-if you use split feature, add `SPLIT_KEYBOARD = yes` to `rules.mk` file. then you need to modify following split keyboard's setting in `config.h`.
+if you use split feature, add `SPLIT_KEYBOARD = yes` to `rules.mk` file. then you need to choose following 2 connection type and modify config for it. default is software serial.
 
-Note: currently this project's code is using 3-wired soft serial with `D3` pin.
+Note: currently this project's code is using 3-wired soft serial with `D2` pin.
 
-##### software serial(3-wired, use normal TRS AUX audio cable)
+##### Option1: software serial(3-wired, use normal TRS AUX audio cable)
 
 choose one signal pin in `D0`, `D1`, `D2`, `D3` or `E6`. default is `D0`, so you need to change `#define SOFT_SERIAL_PIN D0` in `config.h` to your selected value.
 
-##### I2C(4-wired, use TRRS cable)
+##### Option2: I2C(4-wired, use TRRS cable or USB OTG cable)
 
 you need to add `#define USE_I2C` to `config.h` file.
 
