@@ -84,3 +84,23 @@ then add `oled_task_user()` function to `keymap.c` file. in the function, you ca
 you can also configulate some more features described in the docs above.
 
 for example, you can use different font file to show some more logos.
+
+#### reduce firmware size by disabling some features
+
+maybe you're suffering too large firmware size. disable some unused feature to reduce firmware size.
+
+for example:
+
+##### Option: remove LOCKING support
+
+this feature is only used by mechanical locking feature for Num lock, Caps lock and Scroll lock.
+
+as far as you use normal key switch, you don't need this feature. remove or comment out `#define LOCKING_SUPPORT_ENABLE` and `#define LOCKING_RESYNC_ENABLE` from `config.h`.
+
+disabling this feature makes about 200 bytes free space.
+
+##### Option: disable mouse keys
+
+change `MOUSEKEY_ENABLE` value in `rules.mk` to `no`.
+
+disabling this feature makes about 3000 bytes free space.

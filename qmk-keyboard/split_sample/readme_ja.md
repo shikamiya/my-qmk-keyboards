@@ -74,3 +74,25 @@ OLEDを使う場合、 `rules.mk` ファイル内に `OLED_DRIVER_ENABLE = yes` 
 ディスプレイに文字を表示するには、 `keymap.c` ファイル内に `oled_task_user` 関数を追加して、その中で `oled_write_P()` などのAPIを使用します。 詳細な説明は [OLED Driver](https://beta.docs.qmk.fm/features/feature_oled_driver) ページに書かれています。
 
 また、上記ページに書かれている他の設定も変更が可能です。例えば、表示するロゴをカスタマイズするためにフォントファイルを変更することができます。
+
+#### 機能の無効化によるファームウェアサイズの削減
+
+上記の全機能を有効化した場合、Pro Microには書き込めないサイズのファームウェアが生成されるかもしれません。以下の機能は無効化してファームウェアサイズを削減することができます。
+
+以下のような例があります。
+
+##### Option: LOCKING_SUPPORTの無効化
+
+この機能は、Num lock, Caps lock, Scroll lockに機械的なトグルスイッチを使用することができるようにする機能です。
+
+一般的なMXスイッチなどを使っている限りこの機能は必要ありません。
+
+無効化するには、 `config.h` ファイル内の `#define LOCKING_SUPPORT_ENABLE` と `#define LOCKING_RESYNC_ENABLE` を削除、もしくはコメントアウトしてください。
+
+無効化によっておよそ200バイトの容量を削減することが可能です。
+
+#### Option: マウスキーの無効化
+
+`rules.mk` ファイル内の `MOUSEKEY_ENABLE` の値を `no` に変更することで無効化することができます。
+
+無効化によっておよそ3000バイトの容量を削減することが可能です。
