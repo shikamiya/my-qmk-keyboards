@@ -104,3 +104,5 @@ OLEDを使う場合、 `rules.mk` ファイル内に `OLED_DRIVER_ENABLE = yes` 
 分割キーボードはrowを2倍にする必要があります。(TODO:このへんの詳しい説明)
 
 reversibleなsplitの並べ替えは2つの方法があって、LAYOUTマクロで手動でやる方法と、MATRIX_COL_PINS_RIGHTを定義する方法があります。後者でやりました。(TODO: 雑なので書き直す)
+
+とりあえずhelixのdefaultキーマップをコピーしてきています。

@@ -105,4 +105,6 @@ change `MOUSEKEY_ENABLE` value in `rules.mk` to `no`.
 
 disabling this feature makes about 3000 bytes free space.
 
-###
+### define matrix and keymap
+
+(TODO)
